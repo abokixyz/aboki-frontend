@@ -14,28 +14,28 @@ const Hero = () => {
         
         {/* Floating Geometric Shapes & Currency/Stablecoin Logos */}
         <div className="absolute top-1/4 left-1/4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center animate-float opacity-80 border border-gray-200">
-          <img src="/ngn.svg" alt="Nigerian Naira" className="w-8 h-8 rounded-full" />
+          <Image src="/ngn.svg" alt="Nigerian Naira" width={32} height={32} className="rounded-full" />
         </div>
         <div className="absolute top-1/3 right-1/4 w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center animate-float-delayed opacity-75 border border-gray-200">
-          <img src="/usdc.svg" alt="USDC" className="w-10 h-10 rounded-full" />
+          <Image src="/usdc.svg" alt="USDC" width={40} height={40} className="rounded-full" />
         </div>
         <div className="absolute bottom-1/4 left-1/3 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center animate-bounce opacity-70 border border-gray-200">
-          <img src="/usdt.svg" alt="USDT" className="w-7 h-7 rounded-full" />
+          <Image src="/usdt.svg" alt="USDT" width={28} height={28} className="rounded-full" />
         </div>
         <div className="absolute top-1/2 right-1/3 w-13 h-13 bg-white rounded-full shadow-lg flex items-center justify-center animate-pulse opacity-65 border border-gray-200">
-          <img src="/gh.png" alt="Ghana Cedi" className="w-9 h-9 rounded-full" />
+          <Image src="/gh.png" alt="Ghana Cedi" width={36} height={36} className="rounded-full" />
         </div>
         <div className="absolute top-20 right-20 w-11 h-11 bg-white rounded-full shadow-md flex items-center justify-center animate-float opacity-60 border border-gray-200">
-          <img src="/ke.png" alt="Kenyan Shilling" className="w-8 h-8 rounded-full" />
+          <Image src="/ke.png" alt="Kenyan Shilling" width={32} height={32} className="rounded-full" />
         </div>
         <div className="absolute bottom-20 right-1/4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center animate-float-delayed opacity-70 border border-gray-200">
-          <img src="/us.png" alt="US Dollar" className="w-9 h-9 rounded-full" />
+          <Image src="/us.png" alt="US Dollar" width={36} height={36} className="rounded-full" />
         </div>
         <div className="absolute top-3/4 left-10 w-11 h-11 bg-white rounded-full shadow-md flex items-center justify-center animate-float opacity-55 border border-gray-200">
-          <img src="/usdc.svg" alt="Euro" className="w-8 h-8 rounded-full" />
+          <Image src="/usdc.svg" alt="Euro" width={32} height={32} className="rounded-full" />
         </div>
         <div className="absolute bottom-1/3 right-10 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center animate-bounce opacity-60 border border-gray-200">
-          <img src="/usdt.svg" alt="British Pound" className="w-7 h-7 rounded-full" />
+          <Image src="/usdt.svg" alt="British Pound" width={28} height={28} className="rounded-full" />
         </div>
         
         {/* Grid Pattern */}
@@ -125,7 +125,7 @@ const Hero = () => {
             {/* Floating stats around dashboard */}
             <div className="absolute -top-4 -left-4 bg-white rounded-2xl shadow-lg border border-gray-200 px-4 py-3 animate-float opacity-90">
               <div className="text-sm font-semibold text-[#9333EA]">₦2.5M</div>
-              <div className="text-xs text-gray-500">Today's volume</div>
+              <div className="text-xs text-gray-500">Today&apos;s volume</div>
             </div>
             
             <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg border border-gray-200 px-4 py-3 animate-float-delayed opacity-90">

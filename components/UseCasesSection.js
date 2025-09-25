@@ -35,7 +35,7 @@ const UseCasesSection = () => {
     {
       id: 4,
       title: "BORDERLESS BANKING",
-      description: "Multi-currency accounts with instant settlements. Serve customers across Africa without traditional banking barriers.",
+      description: "Multi-currency accounts with instant settlements. Serve customers across World without traditional banking barriers.",
       icon: "🏦",
       color: "indigo",
       bgGradient: "from-indigo-500 to-purple-600",
@@ -101,7 +101,7 @@ const UseCasesSection = () => {
             </span>
           </h2>
           <p className="text-white/80 text-xl max-w-2xl leading-relaxed">
-            Real-world applications powering Africa's financial infrastructure. 
+            Real-world applications powering World&apos;s financial infrastructure. 
             From remittances to treasury management, our APIs enable seamless 
             crypto-to-fiat solutions.
           </p>

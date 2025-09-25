@@ -28,7 +28,7 @@ const TrustedBySection = () => {
         {/* Header Text */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6" style={{fontFamily: '"Space Grotesk", "Inter", system-ui, sans-serif', letterSpacing: '-0.02em'}}>
-            Powering Africa's Financial Future
+            Powering World&apos;s Financial Future
           </h2>
           <p 
             className="text-white/90 text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed"
