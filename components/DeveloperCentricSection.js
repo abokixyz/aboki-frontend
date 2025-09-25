@@ -4,7 +4,7 @@ const DeveloperCentricSection = () => {
   const [activeTab, setActiveTab] = useState('javascript');
 
   const codeSnippets = {
-    javascript: `const response = await fetch("https://api.blocktradar.co/v1/wallets/create", {
+    javascript: `const response = await fetch("https://api.Aboki.co/v1/wallets/create", {
   method: "POST",
   headers: {
     "x-api-key": "<api-key>",
@@ -24,7 +24,7 @@ const data = await response.json();`,
     python: `import requests
 
 response = requests.post(
-    "https://api.blocktradar.co/v1/wallets/create",
+    "https://api.Aboki.co/v1/wallets/create",
     headers={
         "x-api-key": "<api-key>",
         "content-type": "application/json"
@@ -40,7 +40,7 @@ response = requests.post(
 
 data = response.json()`,
 
-    curl: `curl -X POST "https://api.blocktradar.co/v1/wallets/create" \\
+    curl: `curl -X POST "https://api.Aboki.co/v1/wallets/create" \\
   -H "x-api-key: <api-key>" \\
   -H "content-type: application/json" \\
   -d '{
@@ -52,7 +52,7 @@ data = response.json()`,
   }'`,
 
     php: `<?php
-$response = wp_remote_post("https://api.blocktradar.co/v1/wallets/create", [
+$response = wp_remote_post("https://api.Aboki.co/v1/wallets/create", [
     'headers' => [
         'x-api-key' => '<api-key>',
         'content-type' => 'application/json'
@@ -85,7 +85,7 @@ payload := map[string]interface{}{
 }
 
 jsonPayload, _ := json.Marshal(payload)
-req, _ := http.NewRequest("POST", "https://api.blocktradar.co/v1/wallets/create", 
+req, _ := http.NewRequest("POST", "https://api.Aboki.co/v1/wallets/create", 
     bytes.NewBuffer(jsonPayload))
 
 req.Header.Set("x-api-key", "<api-key>")
@@ -95,7 +95,7 @@ client := &http.Client{}
 response, _ := client.Do(req)`,
 
     java: `HttpRequest request = HttpRequest.newBuilder()
-    .uri(URI.create("https://api.blocktradar.co/v1/wallets/create"))
+    .uri(URI.create("https://api.Aboki.co/v1/wallets/create"))
     .header("x-api-key", "<api-key>")
     .header("content-type", "application/json")
     .POST(HttpRequest.BodyPublishers.ofString("""
