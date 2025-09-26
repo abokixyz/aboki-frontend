@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const FooterSection = () => {
   const supportedTokens = [
@@ -167,20 +168,19 @@ const FooterSection = () => {
             {/* Company Info */}
             <div className="space-y-6">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-[#9333EA] rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">B</span>
-                </div>
-                <span className="text-gray-900 font-bold text-lg">Aboki</span>
+              <Link href="/" className="flex items-center gap-2">
+           <Image src="/logo.svg" alt="Company Logo" width={100} height={100} />
+          </Link>
               </div>
               
               <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
-                Our solutions are as simple as they are powerful, making stablecoin wallets accessible for every fintech.
+                Our API-first platform provides businesses with lightning-fast, secure infrastructure to power seamless stablecoin-to-fiat transactions. Whether abstracted or fully integrated, empower your customers with enterprise-grade speed and reliability..
               </p>
               
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-[#9333EA] text-sm">
                   <div className="w-2 h-2 bg-[#9333EA] rounded-full"></div>
-                  <span>info@Aboki.co</span>
+                  <span>hello@Aboki.xyz</span>
                 </div>
                 <p className="text-gray-500 text-xs">
                   31 Continental Dr Suite 305 Newark,<br />

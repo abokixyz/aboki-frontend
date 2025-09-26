@@ -1,6 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const UseCasesSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const useCases = [
     {
       id: 1,
@@ -55,13 +82,19 @@ const UseCasesSection = () => {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden" style={{
-      fontFamily: '"Inter", "SF Pro Display", "Helvetica Neue", system-ui, sans-serif'
-    }}>
+    <section 
+      ref={sectionRef}
+      className="relative py-24 overflow-hidden" 
+      style={{
+        fontFamily: '"Inter", "SF Pro Display", "Helvetica Neue", system-ui, sans-serif'
+      }}
+    >
       {/* Smooth Gradient Background - White to Purple */}
       <div className="absolute inset-0">
         <div 
-          className="absolute inset-0"
+          className={`absolute inset-0 transition-all duration-1500 ${
+            isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
           style={{
             background: 'linear-gradient(180deg, #ffffff 0%, #faf7ff 20%, #f3f0ff 40%, #e9e5ff 60%, #a855f7 80%, #9333ea 100%)'
           }}
@@ -71,7 +104,9 @@ const UseCasesSection = () => {
       {/* Geometric Background Patterns */}
       <div className="absolute inset-0">
         {/* Subtle patterns throughout */}
-        <div className="absolute inset-0 opacity-10">
+        <div className={`absolute inset-0 opacity-10 transition-opacity duration-1000 delay-300 ${
+          isVisible ? 'opacity-10' : 'opacity-0'
+        }`}>
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, rgba(147, 51, 234, 0.3) 1px, transparent 0)`,
             backgroundSize: '60px 60px'
@@ -79,32 +114,102 @@ const UseCasesSection = () => {
         </div>
         
         {/* Curved lines overlay */}
-        <div className="absolute inset-0 opacity-20">
+        <div className={`absolute inset-0 opacity-20 transition-all duration-1000 ${
+          isVisible ? 'opacity-20' : 'opacity-0'
+        }`}>
           <svg className="w-full h-full" viewBox="0 0 800 600" fill="none">
-            <path d="M-200 100 Q400 200 800 50" stroke="rgba(147, 51, 234, 0.2)" strokeWidth="2"/>
-            <path d="M-200 200 Q400 300 800 150" stroke="rgba(147, 51, 234, 0.2)" strokeWidth="2"/>
-            <path d="M-200 300 Q400 400 800 250" stroke="rgba(147, 51, 234, 0.2)" strokeWidth="2"/>
-            <path d="M-200 400 Q400 500 800 350" stroke="rgba(147, 51, 234, 0.2)" strokeWidth="2"/>
-            <path d="M-200 500 Q400 600 800 450" stroke="rgba(147, 51, 234, 0.2)" strokeWidth="2"/>
+            <path 
+              d="M-200 100 Q400 200 800 50" 
+              stroke="rgba(147, 51, 234, 0.2)" 
+              strokeWidth="2"
+              className={`transition-all duration-1500 delay-400 ${
+                isVisible ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{
+                strokeDasharray: '1000',
+                strokeDashoffset: isVisible ? '0' : '1000'
+              }}
+            />
+            <path 
+              d="M-200 200 Q400 300 800 150" 
+              stroke="rgba(147, 51, 234, 0.2)" 
+              strokeWidth="2"
+              className={`transition-all duration-1500 delay-600 ${
+                isVisible ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{
+                strokeDasharray: '1000',
+                strokeDashoffset: isVisible ? '0' : '1000'
+              }}
+            />
+            <path 
+              d="M-200 300 Q400 400 800 250" 
+              stroke="rgba(147, 51, 234, 0.2)" 
+              strokeWidth="2"
+              className={`transition-all duration-1500 delay-800 ${
+                isVisible ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{
+                strokeDasharray: '1000',
+                strokeDashoffset: isVisible ? '0' : '1000'
+              }}
+            />
+            <path 
+              d="M-200 400 Q400 500 800 350" 
+              stroke="rgba(147, 51, 234, 0.2)" 
+              strokeWidth="2"
+              className={`transition-all duration-1500 delay-1000 ${
+                isVisible ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{
+                strokeDasharray: '1000',
+                strokeDashoffset: isVisible ? '0' : '1000'
+              }}
+            />
+            <path 
+              d="M-200 500 Q400 600 800 450" 
+              stroke="rgba(147, 51, 234, 0.2)" 
+              strokeWidth="2"
+              className={`transition-all duration-1500 delay-1200 ${
+                isVisible ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{
+                strokeDasharray: '1000',
+                strokeDashoffset: isVisible ? '0' : '1000'
+              }}
+            />
           </svg>
         </div>
       </div>
 
       {/* Floating geometric elements */}
-      <div className="absolute top-20 left-10 w-2 h-2 bg-purple-500 rounded-full opacity-60 animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-3 h-3 bg-cyan-300 rounded-full opacity-40 animate-ping"></div>
-      <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-pink-500 rounded-full opacity-70 animate-pulse"></div>
-      <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-white rounded-full opacity-60 animate-pulse"></div>
+      <div className={`absolute top-20 left-10 w-2 h-2 bg-purple-500 rounded-full animate-pulse transition-all duration-1000 ${
+        isVisible ? 'opacity-60' : 'opacity-0'
+      }`} style={{transitionDelay: '1400ms'}}></div>
+      <div className={`absolute bottom-20 right-10 w-3 h-3 bg-cyan-300 rounded-full animate-ping transition-all duration-1000 ${
+        isVisible ? 'opacity-40' : 'opacity-0'
+      }`} style={{transitionDelay: '1600ms'}}></div>
+      <div className={`absolute top-1/2 left-1/4 w-1 h-1 bg-pink-500 rounded-full animate-pulse transition-all duration-1000 ${
+        isVisible ? 'opacity-70' : 'opacity-0'
+      }`} style={{transitionDelay: '1800ms'}}></div>
+      <div className={`absolute top-1/3 right-1/4 w-2 h-2 bg-white rounded-full animate-pulse transition-all duration-1000 ${
+        isVisible ? 'opacity-60' : 'opacity-0'
+      }`} style={{transitionDelay: '2000ms'}}></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
         <div className="mb-20 text-center">
           <h2 
-            className="text-6xl md:text-7xl font-black mb-8 leading-tight bg-gradient-to-r from-gray-900 via-purple-600 to-white bg-clip-text text-transparent"
+            className={`text-6xl md:text-7xl font-black mb-8 leading-tight bg-gradient-to-r from-gray-900 via-purple-600 to-white bg-clip-text text-transparent transition-all duration-1000 ${
+              isVisible 
+                ? 'opacity-100 transform translate-y-0' 
+                : 'opacity-0 transform translate-y-12'
+            }`}
             style={{
               fontFamily: '"Space Grotesk", "Inter", system-ui, sans-serif',
-              letterSpacing: '-0.03em'
+              letterSpacing: '-0.03em',
+              transitionDelay: '200ms'
             }}
           >
             USE
@@ -113,7 +218,11 @@ const UseCasesSection = () => {
               CASES
             </span>
           </h2>
-          <p className="text-gray-700 text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className={`text-gray-700 text-xl max-w-2xl mx-auto leading-relaxed transition-all duration-1000 ${
+            isVisible 
+              ? 'opacity-100 transform translate-y-0' 
+              : 'opacity-0 transform translate-y-8'
+          }`} style={{transitionDelay: '400ms'}}>
             Real-world applications powering World&apos;s financial infrastructure. 
             From remittances to treasury management, our APIs enable seamless 
             crypto-to-fiat solutions.
@@ -131,12 +240,21 @@ const UseCasesSection = () => {
             return (
               <div 
                 key={useCase.id}
-                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-16`}
+                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-16 transition-all duration-1000 ${
+                  isVisible 
+                    ? 'opacity-100 transform translate-y-0' 
+                    : 'opacity-0 transform translate-y-16'
+                }`}
+                style={{transitionDelay: `${600 + index * 200}ms`}}
               >
                 
                 {/* Content Side */}
                 <div className="flex-1 space-y-6">
-                  <div className="flex items-center gap-4 mb-6">
+                  <div className={`flex items-center gap-4 mb-6 transition-all duration-800 ${
+                    isVisible 
+                      ? 'opacity-100 transform translate-x-0' 
+                      : `opacity-0 transform ${index % 2 === 0 ? '-translate-x-8' : 'translate-x-8'}`
+                  }`} style={{transitionDelay: `${800 + index * 200}ms`}}>
                     <div className={`w-16 h-16 rounded-2xl ${
                       cardStyle === 'white' ? 'bg-purple-100 border border-purple-200 hover:bg-purple-200' : 
                       cardStyle === 'mixed' ? 'bg-purple-200/60 border border-purple-300 hover:bg-purple-200/80' :
@@ -150,20 +268,33 @@ const UseCasesSection = () => {
                   </div>
                   
                   <h3 
-                    className={`text-4xl md:text-5xl font-black leading-tight mb-6 ${textOpacity}`}
+                    className={`text-4xl md:text-5xl font-black leading-tight mb-6 ${textOpacity} transition-all duration-800 ${
+                      isVisible 
+                        ? 'opacity-100 transform translate-x-0' 
+                        : `opacity-0 transform ${index % 2 === 0 ? '-translate-x-8' : 'translate-x-8'}`
+                    }`}
                     style={{
                       fontFamily: '"Space Grotesk", "Inter", system-ui, sans-serif',
-                      letterSpacing: '-0.02em'
+                      letterSpacing: '-0.02em',
+                      transitionDelay: `${1000 + index * 200}ms`
                     }}
                   >
                     {useCase.title}
                   </h3>
                   
-                  <p className={`${subtextOpacity} text-lg leading-relaxed max-w-lg`}>
+                  <p className={`${subtextOpacity} text-lg leading-relaxed max-w-lg transition-all duration-800 ${
+                    isVisible 
+                      ? 'opacity-100 transform translate-x-0' 
+                      : `opacity-0 transform ${index % 2 === 0 ? '-translate-x-8' : 'translate-x-8'}`
+                  }`} style={{transitionDelay: `${1200 + index * 200}ms`}}>
                     {useCase.description}
                   </p>
                   
-                  <div className="flex items-center gap-4 pt-4">
+                  <div className={`flex items-center gap-4 pt-4 transition-all duration-800 ${
+                    isVisible 
+                      ? 'opacity-100 transform translate-x-0' 
+                      : `opacity-0 transform ${index % 2 === 0 ? '-translate-x-8' : 'translate-x-8'}`
+                  }`} style={{transitionDelay: `${1400 + index * 200}ms`}}>
                     <button className={`px-6 py-3 font-semibold rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 ${
                       cardStyle === 'white' ? 'bg-[#9333EA] text-white hover:bg-purple-700 hover:shadow-purple-500/25' :
                       cardStyle === 'mixed' ? 'bg-[#7c3aed] text-white hover:bg-purple-800 hover:shadow-purple-500/30' :
@@ -183,7 +314,11 @@ const UseCasesSection = () => {
 
                 {/* Visual Side - 3D Isometric Card */}
                 <div className="flex-1 flex justify-center">
-                  <div className="relative group">
+                  <div className={`relative group transition-all duration-1000 ${
+                    isVisible 
+                      ? 'opacity-100 transform translate-y-0 scale-100' 
+                      : 'opacity-0 transform translate-y-12 scale-95'
+                  }`} style={{transitionDelay: `${1000 + index * 200}ms`}}>
                     {/* Main 3D Card */}
                     <div 
                       className={`w-80 h-64 rounded-3xl shadow-2xl transform rotate-3 group-hover:rotate-6 transition-all duration-500 relative overflow-hidden ${
@@ -256,9 +391,26 @@ const UseCasesSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20 pt-16 border-t border-gray-300">
-          <h3 className="text-3xl font-bold text-gray-900 mb-6" style={{fontFamily: '"Space Grotesk", "Inter", system-ui, sans-serif'}}>Ready to build with our APIs?</h3>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className={`text-center mt-20 pt-16 border-t border-gray-300 transition-all duration-1000 ${
+          isVisible 
+            ? 'opacity-100 transform translate-y-0' 
+            : 'opacity-0 transform translate-y-8'
+        }`} style={{transitionDelay: `${1600 + useCases.length * 200}ms`}}>
+          <h3 className={`text-3xl font-bold text-gray-900 mb-6 transition-all duration-800 ${
+            isVisible 
+              ? 'opacity-100 transform translate-y-0' 
+              : 'opacity-0 transform translate-y-4'
+          }`} style={{
+            fontFamily: '"Space Grotesk", "Inter", system-ui, sans-serif',
+            transitionDelay: `${1800 + useCases.length * 200}ms`
+          }}>
+            Ready to build with our APIs?
+          </h3>
+          <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-800 ${
+            isVisible 
+              ? 'opacity-100 transform translate-y-0' 
+              : 'opacity-0 transform translate-y-4'
+          }`} style={{transitionDelay: `${2000 + useCases.length * 200}ms`}}>
             <button className="px-8 py-4 bg-[#9333EA] text-white font-semibold rounded-2xl hover:bg-purple-700 hover:shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1">
               Start Building Today
             </button>
