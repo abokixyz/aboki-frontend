@@ -88,7 +88,7 @@ const Header = () => {
               {/* Developers Dropdown */}
               <div className="absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-black/10 border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                 <div className="p-6 space-y-4">
-                  <Link href="/documentation" className="flex items-start gap-4 p-3 rounded-xl hover:bg-purple-50/80 transition-all duration-200 group/item">
+                  <Link href="https://docs.aboki.xyz/introduction" className="flex items-start gap-4 p-3 rounded-xl hover:bg-purple-50/80 transition-all duration-200 group/item">
                     <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mt-0.5">
                       <svg className="w-4 h-4 text-[#9333EA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -100,7 +100,7 @@ const Header = () => {
                     </div>
                   </Link>
                   
-                  <Link href="/api-reference" className="flex items-start gap-4 p-3 rounded-xl hover:bg-purple-50/80 transition-all duration-200 group/item">
+                  <Link href="https://docs.aboki.xyz/for-users" className="flex items-start gap-4 p-3 rounded-xl hover:bg-purple-50/80 transition-all duration-200 group/item">
                     <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mt-0.5">
                       <svg className="w-4 h-4 text-[#9333EA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -112,7 +112,7 @@ const Header = () => {
                     </div>
                   </Link>
                   
-                  <Link href="/status" className="flex items-start gap-4 p-3 rounded-xl hover:bg-purple-50/80 transition-all duration-200 group/item">
+                  <Link href="https://docs.aboki.xyz/introduction" className="flex items-start gap-4 p-3 rounded-xl hover:bg-purple-50/80 transition-all duration-200 group/item">
                     <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mt-0.5">
                       <svg className="w-4 h-4 text-[#9333EA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -213,8 +213,8 @@ const Header = () => {
             }`}>
               Swap
             </Link>
-            <Link href="/login" className={`transition-all duration-300 text-[14px] font-medium px-3 py-2 rounded-lg hover:bg-black/5 ${
-              isActive('/login') 
+            <Link href="https://app.aboki.xyz/auth/signin" className={`transition-all duration-300 text-[14px] font-medium px-3 py-2 rounded-lg hover:bg-black/5 ${
+              isActive('https://app.aboki.xyz/auth/signin') 
                 ? 'text-[#9333EA] bg-purple-50' 
                 : 'text-gray-900 hover:text-[#9333EA]'
             }`}>
@@ -329,7 +329,7 @@ const Header = () => {
                     mobileDropdowns.developers ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
                   }`}>
                     <div className="pl-4 space-y-2">
-                      <Link href="/documentation" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-purple-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                      <Link href="https://docs.aboki.xyz/introduction" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-purple-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
                         <svg className="w-4 h-4 text-[#9333EA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
@@ -339,7 +339,7 @@ const Header = () => {
                         </div>
                       </Link>
                       
-                      <Link href="/api-reference" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-purple-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                      <Link href="https://docs.aboki.xyz/for-users" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-purple-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
                         <svg className="w-4 h-4 text-[#9333EA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
@@ -349,7 +349,7 @@ const Header = () => {
                         </div>
                       </Link>
                       
-                      <Link href="/status" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-purple-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                      <Link href="https://docs.aboki.xyz/introduction" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-purple-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
                         <svg className="w-4 h-4 text-[#9333EA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                         </svg>
@@ -455,9 +455,9 @@ const Header = () => {
                   isMobileMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
                 }`} style={{transitionDelay: '500ms'}}>
                   <Link 
-                    href="/login" 
+                    href="https://app.aboki.xyz/auth/signin" 
                     className={`block text-center text-base font-medium py-3 px-5 transition-all duration-300 rounded-xl hover:scale-[1.02] ${
-                      isActive('/login')
+                      isActive('https://app.aboki.xyz/auth/signin')
                         ? 'text-[#9333EA] bg-purple-50 shadow-sm'
                         : 'text-gray-600 hover:text-[#9333EA] hover:bg-gray-50'
                     }`}
