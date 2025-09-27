@@ -221,7 +221,7 @@ const Header = () => {
               Log in
             </Link>
             <Link 
-              href="/get-started" 
+              href="https://app.aboki.xyz/auth/signup" 
               className="bg-[#9333EA] text-white px-4 py-2 rounded-2xl font-semibold text-[13px] hover:bg-purple-700 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
             >
               Get started for free
