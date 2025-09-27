@@ -28,6 +28,15 @@ const UseCasesSection = () => {
     };
   }, []);
 
+  // Click handlers for navigation
+  const handleLearnMoreClick = () => {
+    window.open('https://app.aboki.xyz', '_blank', 'noopener,noreferrer');
+  };
+
+  const handleStartBuildingClick = () => {
+    window.open('https://app.aboki.xyz', '_blank', 'noopener,noreferrer');
+  };
+
   const useCases = [
     {
       id: 1,
@@ -271,7 +280,10 @@ const UseCasesSection = () => {
                     ? 'opacity-100 transform translate-x-0' 
                     : `opacity-0 transform ${index % 2 === 0 ? '-translate-x-8' : 'translate-x-8'}`
                 }`} style={{transitionDelay: `${1400 + index * 200}ms`}}>
-                  <button className="px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-2xl hover:bg-white/30 hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:-translate-y-1">
+                  <button 
+                    onClick={handleLearnMoreClick}
+                    className="px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-2xl hover:bg-white/30 hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                  >
                     Learn More
                   </button>
                   <button className="px-6 py-3 border border-white/40 text-white/90 hover:text-white hover:border-white/60 font-medium rounded-2xl transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
@@ -358,7 +370,10 @@ const UseCasesSection = () => {
               ? 'opacity-100 transform translate-y-0' 
               : 'opacity-0 transform translate-y-4'
           }`} style={{transitionDelay: `${2000 + useCases.length * 200}ms`}}>
-            <button className="px-8 py-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-2xl hover:bg-white/30 hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:-translate-y-1">
+            <button 
+              onClick={handleStartBuildingClick}
+              className="px-8 py-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-2xl hover:bg-white/30 hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+            >
               Start Building Today
             </button>
             <button className="px-8 py-4 border border-white/40 text-white/90 hover:text-white hover:border-white/60 font-medium rounded-2xl transition-all duration-300 transform hover:scale-105 hover:bg-white/10">

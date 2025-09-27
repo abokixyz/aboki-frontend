@@ -81,7 +81,7 @@ const Hero = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-20">
           <Link 
-            href="/get-started" 
+            href="https://app.aboki.xyz/auth/signup" 
             className="group w-full sm:w-auto bg-[#9333EA] text-white px-6 py-3 rounded-2xl font-semibold text-base hover:bg-purple-700 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105 transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden"
           >
             <span className="relative z-10">Get started for free</span>
@@ -94,8 +94,8 @@ const Hero = () => {
             Book demo
           </Link>
           <Link 
-            href="/api-docs" 
-            className="group w-full sm:w-auto text-[#9333EA] font-medium text-base hover:text-purple-700 transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 transform hover:-translate-y-0.5"
+href="https://docs.aboki.xyz"
+className="group w-full sm:w-auto text-[#9333EA] font-medium text-base hover:text-purple-700 transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 transform hover:-translate-y-0.5"
           >
             Explore our API docs
             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
