@@ -94,8 +94,8 @@ const Hero = () => {
             Book demo
           </Link>
           <Link 
-            href="/api-docs" 
-            className="group w-full sm:w-auto text-[#9333EA] font-medium text-base hover:text-purple-700 transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 transform hover:-translate-y-0.5"
+href="https://docs.aboki.xyz"
+className="group w-full sm:w-auto text-[#9333EA] font-medium text-base hover:text-purple-700 transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 transform hover:-translate-y-0.5"
           >
             Explore our API docs
             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
