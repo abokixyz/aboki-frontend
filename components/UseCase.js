@@ -295,13 +295,19 @@ const UseCasesSection = () => {
                       ? 'opacity-100 transform translate-x-0' 
                       : `opacity-0 transform ${index % 2 === 0 ? '-translate-x-8' : 'translate-x-8'}`
                   }`} style={{transitionDelay: `${1400 + index * 200}ms`}}>
-                    <button className={`px-6 py-3 font-semibold rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 ${
-                      cardStyle === 'white' ? 'bg-[#9333EA] text-white hover:bg-purple-700 hover:shadow-purple-500/25' :
-                      cardStyle === 'mixed' ? 'bg-[#7c3aed] text-white hover:bg-purple-800 hover:shadow-purple-500/30' :
-                      'bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30'
-                    }`}>
+                    <a 
+                      href="https://app.aboki.xyz" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={`inline-block px-6 py-3 font-semibold rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 cursor-pointer ${
+                        cardStyle === 'white' ? 'bg-[#9333EA] text-white hover:bg-purple-700 hover:shadow-purple-500/25' :
+                        cardStyle === 'mixed' ? 'bg-[#7c3aed] text-white hover:bg-purple-800 hover:shadow-purple-500/30' :
+                        'bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30'
+                      }`}
+                      style={{ textDecoration: 'none', zIndex: 10, position: 'relative' }}
+                    >
                       Learn More
-                    </button>
+                    </a>
                     <button className={`px-6 py-3 font-medium rounded-2xl transition-all duration-300 transform hover:scale-105 ${
                       cardStyle === 'white' ? 'border border-purple-300 text-purple-700 hover:bg-purple-50 hover:border-purple-400' :
                       cardStyle === 'mixed' ? 'border border-purple-400 text-purple-700 hover:bg-purple-100/50 hover:border-purple-500' :
@@ -411,7 +417,10 @@ const UseCasesSection = () => {
               ? 'opacity-100 transform translate-y-0' 
               : 'opacity-0 transform translate-y-4'
           }`} style={{transitionDelay: `${2000 + useCases.length * 200}ms`}}>
-            <button className="px-8 py-4 bg-[#9333EA] text-white font-semibold rounded-2xl hover:bg-purple-700 hover:shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1">
+            <button 
+              onClick={() => window.open('https://app.aboki.xyz', '_blank')}
+              className="px-8 py-4 bg-[#9333EA] text-white font-semibold rounded-2xl hover:bg-purple-700 hover:shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+            >
               Start Building Today
             </button>
             <button className="px-8 py-4 border border-purple-300 text-purple-700 hover:bg-purple-50 hover:border-purple-400 font-medium rounded-2xl transition-all duration-300 transform hover:scale-105">
