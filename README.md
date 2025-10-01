@@ -2,8 +2,6 @@
 
 > Seamless P2P crypto-to-fiat exchange platform built for Africa
 
-https://mintcdn.com/aboki-0eaabd03/aboki-interface.png?w=560&maxW=1500&auto=format&n=7UrZxtnasV2oDZqN&q=85&s=80bda0670cd922753e2472d6af0f52e2
-
 Aboki is an automated peer-to-peer platform that enables frictionless cryptocurrency to fiat currency exchanges. No middlemen, no hassle—just real liquidity powering your transactions.
 
 ## ✨ Features
