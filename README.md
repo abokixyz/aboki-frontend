@@ -4,7 +4,7 @@
 
 Aboki is an automated peer-to-peer platform that enables frictionless cryptocurrency to fiat currency exchanges. No middlemen, no hassle—just real liquidity powering your transactions.
 
-## ✨ Features
+## Features
 
 - **Instant Conversions**: Average transaction time under 2 minutes
 - **Multi-Chain Support**: Built on Base and Solana networks
@@ -13,7 +13,7 @@ Aboki is an automated peer-to-peer platform that enables frictionless cryptocurr
 - **Developer-Friendly**: Clean API and comprehensive documentation
 - **Real Liquidity**: Powered by genuine market depth
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -55,7 +55,7 @@ npm run build
 npm start
 ```
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 - **Framework**: [Next.js 15.5.4](https://nextjs.org/) with React 19
 - **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
@@ -90,7 +90,7 @@ aboki-frontend/
 - **Base**: Ethereum Layer 2 solution
 - **Solana**: High-performance blockchain
 
-## 📚 Resources
+## Resources
 
 - **Live Platform**: [aboki.xyz](https://aboki.xyz)
 - **Documentation**: [docs.aboki.xyz](https://docs.aboki.xyz)
@@ -98,7 +98,7 @@ aboki-frontend/
 - **GitHub**: [github.com/abokixyz](https://github.com/abokixyz)
 - **Telegram**: [@abokixyz](https://t.me/abokixyz)
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from the community! Here's how you can help:
 
@@ -113,22 +113,22 @@ Please ensure your code follows our linting standards by running:
 npm run lint
 ```
 
-## 📝 Available Scripts
+## Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm start` - Start production server
 - `npm run lint` - Run ESLint
 
-## 🌍 Built for Africa
+## Built for Africa
 
 Aboki is designed specifically for African users, with support for local currencies and payment methods that matter most to the continent's growing crypto community.
 
-## 📄 License
+## License
 
 This project is private and proprietary to Aboki.
 
-## 💬 Community & Support
+## Community & Support
 
 Join our growing community:
 - Report bugs via [GitHub Issues](https://github.com/abokixyz/aboki-frontend/issues)
@@ -136,6 +136,4 @@ Join our growing community:
 - Follow updates on [Twitter](https://x.com/Abokixyz)
 - Read our [Documentation](https://docs.aboki.xyz)
 
----
 
-**Made with ❤️ for Africa** | [aboki.xyz](https://aboki.xyz)
